@@ -1,0 +1,25 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: zuul-service
+
+eureka:
+  client:
+    initial-instance-info-replication-interval-seconds: 2
+    instance-info-replication-interval-seconds: 1
+    registry-fetch-interval-seconds: 1
+    serviceUrl:
+       defaultZone: http://localhost:8791/eureka
+  instance:
+    preferIpAddress: true
+
+zuul:
+  routes:
+    departments-service:
+      path: /departments-service/**
+      url: http://localhost:8080
+    employees-service:
+      path: /employees-service/**
+      url: http://localhost:8081

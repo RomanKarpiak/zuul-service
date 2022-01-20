@@ -1,0 +1,5 @@
+com\roman\filter\PostFilter.class
+com\roman\filter\ErrorFilter.class
+com\roman\filter\PreFilter.class
+com\roman\filter\RouteFilter.class
+com\roman\ZuulApplication.class
